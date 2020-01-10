@@ -1,6 +1,6 @@
 [package]
 name = "alexcrichton-cranelift-object"
-version = "0.52.0"
+version = "0.53.0"
 authors = ["The Cranelift Project Developers"]
 description = "Emit Cranelift output to native object files with `object`"
 repository = "https://github.com/bytecodealliance/cranelift"
@@ -13,13 +13,13 @@ edition = "2018"
 name = "cranelift_object"
 
 [dependencies]
-alexcrichton-cranelift-module = { path = "../cranelift-module", version = "0.52.0" }
+alexcrichton-cranelift-module = { path = "../cranelift-module", version = "0.53.0" }
 object = { version = "0.17", default-features = false, features = ["write"] }
 target-lexicon = "0.10"
 
 [dependencies.alexcrichton-cranelift-codegen]
 path = "../cranelift-codegen"
-version = "0.52.0"
+version = "0.53.0"
 default-features = false
 features = ["std"]
 

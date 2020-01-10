@@ -1,7 +1,7 @@
 [package]
 authors = ["The Cranelift Project Developers"]
 name = "alexcrichton-cranelift-frontend"
-version = "0.52.0"
+version = "0.53.0"
 description = "Cranelift IR builder helper"
 license = "Apache-2.0 WITH LLVM-exception"
 documentation = "https://cranelift.readthedocs.io/"
@@ -14,7 +14,7 @@ edition = "2018"
 name = "cranelift_frontend"
 
 [dependencies]
-alexcrichton-cranelift-codegen = { path = "../cranelift-codegen", version = "0.52.0", default-features = false }
+alexcrichton-cranelift-codegen = { path = "../cranelift-codegen", version = "0.53.0", default-features = false }
 target-lexicon = "0.10"
 log = { version = "0.4.6", default-features = false }
 hashbrown = { version = "0.6", optional = true }

@@ -1,6 +1,6 @@
 [package]
 name = "alexcrichton-cranelift-simplejit"
-version = "0.52.0"
+version = "0.53.0"
 authors = ["The Cranelift Project Developers"]
 description = "A simple JIT library backed by Cranelift"
 repository = "https://github.com/bytecodealliance/cranelift"
@@ -13,8 +13,8 @@ edition = "2018"
 name = "cranelift_simplejit"
 
 [dependencies]
-alexcrichton-cranelift-module = { path = "../cranelift-module", version = "0.52.0" }
-alexcrichton-cranelift-native = { path = "../cranelift-native", version = "0.52.0" }
+alexcrichton-cranelift-module = { path = "../cranelift-module", version = "0.53.0" }
+alexcrichton-cranelift-native = { path = "../cranelift-native", version = "0.53.0" }
 region = "2.0.0"
 libc = { version = "0.2.42" }
 errno = "0.2.4"
@@ -23,7 +23,7 @@ memmap = { version = "0.7.0", optional = true }
 
 [dependencies.alexcrichton-cranelift-codegen]
 path = "../cranelift-codegen"
-version = "0.52.0"
+version = "0.53.0"
 default-features = false
 features = ["std"]
 
@@ -35,9 +35,9 @@ selinux-fix = ['memmap']
 default = []
 
 [dev-dependencies]
-alexcrichton-cranelift = { path = "../cranelift-umbrella", version = "0.52.0" }
-alexcrichton-cranelift-frontend = { path = "../cranelift-frontend", version = "0.52.0" }
-alexcrichton-cranelift-entity = { path = "../cranelift-entity", version = "0.52.0" }
+alexcrichton-cranelift = { path = "../cranelift-umbrella", version = "0.53.0" }
+alexcrichton-cranelift-frontend = { path = "../cranelift-frontend", version = "0.53.0" }
+alexcrichton-cranelift-entity = { path = "../cranelift-entity", version = "0.53.0" }
 
 [badges]
 maintenance = { status = "experimental" }
