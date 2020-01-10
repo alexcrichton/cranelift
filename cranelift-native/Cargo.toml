@@ -1,5 +1,5 @@
 [package]
-name = "cranelift-native"
+name = "alexcrichton-cranelift-native"
 version = "0.52.0"
 authors = ["The Cranelift Project Developers"]
 description = "Support for targeting the host with Cranelift"
@@ -9,8 +9,11 @@ license = "Apache-2.0 WITH LLVM-exception"
 readme = "README.md"
 edition = "2018"
 
+[lib]
+name = "cranelift_native"
+
 [dependencies]
-cranelift-codegen = { path = "../cranelift-codegen", version = "0.52.0", default-features = false }
+alexcrichton-cranelift-codegen = { path = "../cranelift-codegen", version = "0.52.0", default-features = false }
 target-lexicon = "0.10"
 
 [target.'cfg(any(target_arch = "x86", target_arch = "x86_64"))'.dependencies]
@@ -18,11 +21,11 @@ raw-cpuid = "7.0.3"
 
 [features]
 default = ["std"]
-std = ["cranelift-codegen/std"]
+std = ["alexcrichton-cranelift-codegen/std"]
 # when compiling with the "core" feature, nightly must be enabled
 # enabling the "nightly" feature for raw-cpuid allows avoiding
 # linking in a c-library.
-core = ["cranelift-codegen/core", "raw-cpuid/nightly"]
+core = ["alexcrichton-cranelift-codegen/core", "raw-cpuid/nightly"]
 
 [badges]
 maintenance = { status = "experimental" }

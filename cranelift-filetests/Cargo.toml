@@ -1,5 +1,5 @@
 [package]
-name = "cranelift-filetests"
+name = "alexcrichton-cranelift-filetests"
 authors = ["The Cranelift Project Developers"]
 version = "0.52.0"
 description = "Test driver and implementations of the filetest commands"
@@ -9,11 +9,14 @@ repository = "https://github.com/bytecodealliance/cranelift"
 publish = false
 edition = "2018"
 
+[lib]
+name = "cranelift_filetests"
+
 [dependencies]
-cranelift-codegen = { path = "../cranelift-codegen", version = "0.52.0", features = ["testing_hooks"] }
-cranelift-native = { path = "../cranelift-native", version = "0.52.0" }
-cranelift-reader = { path = "../cranelift-reader", version = "0.52.0" }
-cranelift-preopt = { path = "../cranelift-preopt", version = "0.52.0" }
+alexcrichton-cranelift-codegen = { path = "../cranelift-codegen", version = "0.52.0", features = ["testing_hooks"] }
+alexcrichton-cranelift-native = { path = "../cranelift-native", version = "0.52.0" }
+alexcrichton-cranelift-reader = { path = "../cranelift-reader", version = "0.52.0" }
+alexcrichton-cranelift-preopt = { path = "../cranelift-preopt", version = "0.52.0" }
 file-per-thread-logger = "0.1.2"
 filecheck = "0.4.0"
 log = "0.4.6"

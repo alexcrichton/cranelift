@@ -1,6 +1,6 @@
 [package]
 authors = ["The Cranelift Project Developers"]
-name = "cranelift-entity"
+name = "alexcrichton-cranelift-entity"
 version = "0.52.0"
 description = "Data structures using entity references as mapping keys"
 license = "Apache-2.0 WITH LLVM-exception"
@@ -10,6 +10,9 @@ categories = ["no-std"]
 readme = "README.md"
 keywords = ["entity", "set", "map"]
 edition = "2018"
+
+[lib]
+name = "cranelift_entity"
 
 [dependencies]
 serde = { version = "1.0.94", features = ["derive"], optional = true }

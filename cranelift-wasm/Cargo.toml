@@ -1,5 +1,5 @@
 [package]
-name = "cranelift-wasm"
+name = "alexcrichton-cranelift-wasm"
 version = "0.52.0"
 authors = ["The Cranelift Project Developers"]
 description = "Translator from WebAssembly to Cranelift IR"
@@ -10,11 +10,14 @@ readme = "README.md"
 keywords = ["webassembly", "wasm"]
 edition = "2018"
 
+[lib]
+name = "cranelift_wasm"
+
 [dependencies]
 wasmparser = { version = "0.45.0", default-features = false }
-cranelift-codegen = { path = "../cranelift-codegen", version = "0.52.0", default-features = false }
-cranelift-entity = { path = "../cranelift-entity", version = "0.52.0" }
-cranelift-frontend = { path = "../cranelift-frontend", version = "0.52.0", default-features = false }
+alexcrichton-cranelift-codegen = { path = "../cranelift-codegen", version = "0.52.0", default-features = false }
+alexcrichton-cranelift-entity = { path = "../cranelift-entity", version = "0.52.0" }
+alexcrichton-cranelift-frontend = { path = "../cranelift-frontend", version = "0.52.0", default-features = false }
 hashbrown = { version = "0.6", optional = true }
 log = { version = "0.4.6", default-features = false }
 serde = { version = "1.0.94", features = ["derive"], optional = true }
@@ -26,12 +29,12 @@ target-lexicon = "0.10"
 
 [features]
 default = ["std", "basic-blocks"]
-std = ["cranelift-codegen/std", "cranelift-frontend/std"]
-core = ["hashbrown", "cranelift-codegen/core", "cranelift-frontend/core"]
+std = ["alexcrichton-cranelift-codegen/std", "alexcrichton-cranelift-frontend/std"]
+core = ["hashbrown", "alexcrichton-cranelift-codegen/core", "alexcrichton-cranelift-frontend/core"]
 enable-serde = ["serde"]
 
 # Temporary feature that enforces basic block semantics.
-basic-blocks = ["cranelift-codegen/basic-blocks", "cranelift-frontend/basic-blocks"]
+basic-blocks = ["alexcrichton-cranelift-codegen/basic-blocks", "alexcrichton-cranelift-frontend/basic-blocks"]
 
 [badges]
 maintenance = { status = "experimental" }

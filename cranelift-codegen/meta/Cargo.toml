@@ -1,5 +1,5 @@
 [package]
-name = "cranelift-codegen-meta"
+name = "alexcrichton-cranelift-codegen-meta"
 authors = ["The Cranelift Project Developers"]
 version = "0.52.0"
 description = "Metaprogram for cranelift-codegen code generator library"
@@ -8,9 +8,12 @@ repository = "https://github.com/bytecodealliance/cranelift"
 readme = "README.md"
 edition = "2018"
 
+[lib]
+name = "cranelift_codegen_meta"
+
 [dependencies]
-cranelift-codegen-shared = { path = "../shared", version = "0.52.0" }
-cranelift-entity = { path = "../../cranelift-entity", version = "0.52.0" }
+alexcrichton-cranelift-codegen-shared = { path = "../shared", version = "0.52.0" }
+alexcrichton-cranelift-entity = { path = "../../cranelift-entity", version = "0.52.0" }
 
 [badges]
 maintenance = { status = "experimental" }
